@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TextKit_OC-Swift.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    SwiftTest *test = [[SwiftTest alloc] init];
+    [test testFunc];
 }
 
 - (void)didReceiveMemoryWarning {
