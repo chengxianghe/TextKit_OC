@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableCell" rowHeight="100" id="KGk-i7-Jjw" customClass="TableCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4I-lb-PDL">
+                        <rect key="frame" x="8" y="8" width="304" height="83.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Q4I-lb-PDL" secondAttribute="bottom" constant="8" id="MM3-Zi-dsh"/>
+                    <constraint firstItem="Q4I-lb-PDL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="UAD-ka-ou5"/>
+                    <constraint firstAttribute="trailing" secondItem="Q4I-lb-PDL" secondAttribute="trailing" constant="8" id="o4j-ov-ufk"/>
+                    <constraint firstItem="Q4I-lb-PDL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="qnM-N4-fSq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textView" destination="Q4I-lb-PDL" id="ofD-l1-Hm7"/>
+            </connections>
+            <point key="canvasLocation" x="31" y="172"/>
+        </tableViewCell>
+    </objects>
+</document>

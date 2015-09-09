@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XUl-Bc-I3Q">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--测试-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="测试" id="pGu-iK-VDY">
+                        <barButtonItem key="rightBarButtonItem" title="点这里" id="bMY-2B-K0d">
+                            <connections>
+                                <segue destination="8Qn-73-UBg" kind="show" id="asA-2Y-dP2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="750"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0MY-E5-VFg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XUl-Bc-I3Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tca-Pa-tp8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="wJN-lk-ipJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1X-xD-mlq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="750"/>
+        </scene>
+        <!--列表测试-->
+        <scene sceneID="pxh-uf-nL3">
+            <objects>
+                <viewController id="8Qn-73-UBg" customClass="TableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2cN-gf-gC9"/>
+                        <viewControllerLayoutGuide type="bottom" id="4iM-IL-z0I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Oj-t5-5jM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="y3A-kk-Xd0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Qn-73-UBg" id="Zvf-4K-4qd"/>
+                                    <outlet property="delegate" destination="8Qn-73-UBg" id="jzT-Zm-PPc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="y3A-kk-Xd0" secondAttribute="trailing" id="6Z3-no-OyW"/>
+                            <constraint firstItem="4iM-IL-z0I" firstAttribute="top" secondItem="y3A-kk-Xd0" secondAttribute="bottom" id="BAt-qb-k2z"/>
+                            <constraint firstItem="y3A-kk-Xd0" firstAttribute="leading" secondItem="2Oj-t5-5jM" secondAttribute="leading" id="GF1-WZ-Gae"/>
+                            <constraint firstItem="y3A-kk-Xd0" firstAttribute="top" secondItem="2Oj-t5-5jM" secondAttribute="top" id="eQu-qN-YgS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="列表测试" id="ebD-OS-gvi"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="y3A-kk-Xd0" id="qtJ-Ke-zRm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uww-ck-0Al" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1298" y="750"/>
+        </scene>
+    </scenes>
+</document>
